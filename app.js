@@ -35,7 +35,7 @@ router.route('/')
         livre.description = req.body.description;
         livre.auteur = req.body.auteur;
         livre.anneeParution = req.body.anneeParution
-        livre.save((err)=>{
+        livre.save((err)=>{  // la methode findOneAndUpdate est plus appropriées
             if(err)res.send(err)
             res.send({message:'Livre créé'})
         })
